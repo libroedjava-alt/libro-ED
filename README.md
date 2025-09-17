@@ -13,7 +13,13 @@ libro-ed/
   ├─ pom.xml
   ├─ src/
   │  ├─ main/java/com/example/libroed/App.java
-  │  ├─ main/java/com/example/libroed/ejemplos/ej11/ListaEnterosEj11.java
+  │  ├─ main/java/com/example/libroed/ejemplos/ej1_1/ListaEnterosEj1_1.java
+  │  ├─ main/java/com/example/libroed/ejemplos/ej1_2/ListaEnterosEj1_2.java
+  │  ├─ main/java/com/example/libroed/ejemplos/ej1_3/ListaEnterosEj1_3.java
+  │  ├─ main/java/com/example/libroed/ejemplos/ej1_4/ListaContigua.java
+  │  ├─ main/java/com/example/libroed/ejemplos/ej1_4/TestListaContigua.java
+  │  ├─ main/java/com/example/libroed/ejemplos/ej1_5/Nodo.java
+  │  ├─ main/java/com/example/libroed/ejemplos/ej1_5/TestPuntero.java
   │  └─ test/java/com/example/libroed/AppTest.java
   └─ README.md
 ```
@@ -69,7 +75,7 @@ fin
 
 ### Código Java utilizado
 
-Archivo: `src/main/java/com/example/libroed/ejemplos/ej11/ListaEnterosEj11.java`
+Archivo: `src/main/java/com/example/libroed/ejemplos/ej1_1/ListaEnterosEj1_1.java`
 ```java
 public void consultarelemento(int j) {
     int B;
@@ -100,7 +106,38 @@ Supongamos `P = [10, 20, 30]` y `L = 3`.
   - Salida: `solicitado no existe en la Lista`
 
 ### Ejecución de ejemplo en `App.java`
-En `main`, se crea una lista `P = {10, 20, 30}` usando `ListaEnterosEj11` y se consulta `j = 1`, por lo que verás:
+En `main`, se crea una lista `P = {10, 20, 30}` usando `ListaEnterosEj1_1` y se consulta `j = 1`, por lo que verás:
 ```
 Hola, Libro ED!
 valor = 20
+```
+
+## Ejemplo 1.4: Programa interactivo de lista contigua
+
+Se implementa un programa en consola que ejemplifica las operaciones de una lista contigua: consultar, borrar, insertar e imprimir.
+
+- Clase de datos: `src/main/java/com/example/libroed/ejemplos/ej1_4/ListaContigua.java`
+- Programa principal: `src/main/java/com/example/libroed/ejemplos/ej1_4/TestListaContigua.java`
+
+### Operaciones incluidas
+- `consultarelemento(int j)`
+- `borrarelemento(int j)`
+- `insertarelemento(int j, int e)`
+- `imprimirlista()`
+
+### Ejecutar el programa interactivo
+Puedes ejecutarlo con Maven especificando la clase principal:
+```bash
+mvn -q -DskipTests -Dexec.mainClass=com.example.libroed.ejemplos.ej1_4.TestListaContigua exec:java
+```
+
+## Ejemplo 1.5: Uso de un puntero (referencias) en Java
+
+Se implementa un ejemplo simple con una clase `Nodo` y un programa `TestPuntero` que muestra cómo dos referencias pueden apuntar al mismo objeto y reflejar los cambios.
+
+- `src/main/java/com/example/libroed/ejemplos/ej1_5/Nodo.java`
+- `src/main/java/com/example/libroed/ejemplos/ej1_5/TestPuntero.java`
+
+Ejecutar con Maven:
+```bash
+mvn -q -DskipTests -Dexec.mainClass=com.example.libroed.ejemplos.ej1_5.TestPuntero exec:java
